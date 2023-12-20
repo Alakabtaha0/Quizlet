@@ -136,7 +136,7 @@ exports.signup = catchAsync(async (req, res, next) => {
 		// // END JWT CODE
 		const sendEmail = await transporter
 			.sendMail({
-				from: "Taha Al Akab <alakabtaha@gmail.com>",
+				from: "Taha Al Akab <process.env.EMAIL>",
 				to: email,
 				subject: "Verify your email address",
 				text: `Your verification code is ${verificationCode}`,
